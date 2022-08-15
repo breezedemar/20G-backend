@@ -1,0 +1,22 @@
+{
+  "name": "20g-backend",
+  "version": "1.0.0",
+  "description": "Mi primer proyecto de node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node colors.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breezedemar/20G-backend.git"
+  },
+  "author": "breeze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/breezedemar/20G-backend/issues"
+  },
+  "homepage": "https://github.com/breezedemar/20G-backend#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}

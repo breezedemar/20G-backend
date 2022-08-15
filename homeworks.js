@@ -13,7 +13,7 @@ Output:
 }
  */
 
-const nombres = [
+/*const nombres = [
     "Rodolfo",
     "Araceli",
     "Brisa",
@@ -47,5 +47,56 @@ const transformNames = (names) =>{
 }
 
 const transforma = transformNames(nombres)
-console.log("Nombres transformados", transforma)
+console.log("Nombres transformados", transforma)*/
 
+//& CLASE 3 
+
+// El mismo ejercicio de transformarNombres pero con reduce y spread operator ...
+// El reduce recibe 2 valores 
+// 1. callback -> acumulador , current value, indice , array 
+
+//? Ejercicio con "reduce"
+
+const nombres = [
+    "Rodolfo",
+    "Araceli",
+    "Brisa",
+    "Eduardo",
+    "Gio",
+    "Jose",
+    "Luis",
+    "Marco",
+    "Mariana",
+    "Pete",
+    "Sebastian",
+    "Sofia"
+  ]
+
+const transformarNombres = (names) =>{
+
+    return nombres.reduce((acc, valorActual, indice )=>{
+        //console.log("indice", indice)
+
+        //console.log("accumulador", acc)
+
+        return{
+            ...acc,
+            [indice]: {
+                name: valorActual,
+                length: valorActual.length,
+                isGreaterThanFour: valorActual.length > 3
+
+            }
+        }
+    }, {})
+}
+
+const nomTransformados = transformarNombres(nombres)
+
+console.log("Nombres transformados", nomTransformados)
+
+/**
+ * Leer un archivo con la api del filesystem de Node
+ */
+
+//! FALTA TERMINAR EL EJERCICIO 

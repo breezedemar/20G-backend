@@ -1,4 +1,5 @@
-
+//& CLASE 2 
+//? Crear un archivo con la API fileSystem / callback API
 const fs = require("fs")
 
 //console.log(fs)

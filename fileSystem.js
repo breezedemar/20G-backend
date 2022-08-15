@@ -1,3 +1,6 @@
+// & CLASS 3
+
+//? Crear un archivo desde el File system / callback API 
 
 const fs = require("fs")
 
@@ -11,3 +14,4 @@ fs.writeFile("archivo.txt", "Archivo creado desde node", "utf8", (error) =>{
 
     console.log("El archivo fue creado con exito")
 })
+

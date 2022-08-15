@@ -1,45 +1,58 @@
+//& Clase 4 
 
-// & CLASS 2  
-  
-//console.log("hola nodejs")
-//console.log(process.argv)
-//console.log(process.argv[2])
-
-
-//^ Destructurando 
-/**
- * Es sacar cosas con el tipo de dato que son
- * 1. Cuando es con OBJETOS mandar a llamar el nombre de la llave
- * 2. Cuando es con ARREGLOS es por posición 
+//? Callbacks and Promises 
+/*
+ * Promesa -> El resultado de un proceso asincrono
+ *
+ * Reglas ->
+ * Tienen 3 estados
+ * 1 - Pending -> 5s, 5 segundos pendiente
+ * 2 - Rejected -> si ocurrio un error -> si fuera rechazada
+ * 3 - Accepted -> si se resolvio -> si fue aceptada
+ *
+ * Al momento de hacer la promesa, declaracion de la promesa
+ * Las promesas se resuelven o se rechazan
+ *    - Resolve -> Function que se ejecutan
+ *    - Reject -> Function que se ejecutan
+ *
+ * Al momento de ejecutarlas
+ * Recibir el rechazo o la respuesta resuelta
+ * .then -> para recibir lo resuelto
+ * .catch -> para recibir lo rechazado -> el error
  */
 
-//? 1. Por OBJETO
+//? AsyncAwait
 
-/*const apellidos = {
-    ale : {
-        apellido: "hernandez",
-    },
-    breeze : {
-        apellidop: "rechy"
-    }
-}*/
+/**
+ * Va a cambiar la forma de ejecutar la forma de ejecutarse nuestras promesas
+ * Async Await
+ * 
+ * Async -> Cuando vamos a hacer una funcion asyncrona
+ * Await -> Va a ESPERAR una promesas. -> 5 segundos
+ * 
+ * Reglas:
+ * Async va en la declaracion de la funcion, se esta declarando como asincrona
+ * Await va dentro de esa funcion que se declaro como asincrona
+ * 
+ * No puedo usar await sin el async.
+ * 
+ * Sintaxis:
+ */
 
-//console.log("apellidos", apellidos)
 
-//1. mandar a llamar el nombre de la llave del objeto 
+// Sintaxis
+// Arrow function
 
-/*const {ale, breeze} = apellidos
+// const funcionAsincrona = async () => {
 
-console.log("ale", ale)
-console.log("breeze", breeze)
+//  Todo lo de adentro va a ser asincrono
+//  Que se puede usar Await aqui adentro
+//  Que el retorno de esta funcion va a ser una promesa
+// }
 
-//? 2. Por ARREGLO
-
-const arregloNames=[
-    "breeze",
-    "miguel"
-]*/
-
-/*const [nombre2, nombre1] =arregloNames
-console.log("nombre1", nombre1)
-console.log("nombre2", nombre2)*/
+// Funcion normal
+// async function asincronidadFuncion() {
+//   Todo lo de adentro va a ser asincrono
+//   Que se puede usar Await aqui adentro
+//   Que el retorno de esta funcion va a ser una promesa
+// }

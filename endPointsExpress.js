@@ -1,9 +1,17 @@
+//& Clase 5 
 
-// & CLASS 5
+//? EndPoint 
 /**
- * Tarea de la clase 06
-Hacer el CRUD con express,
+ *  Es el punto final a donde llega nuestro request , cambian por el metodo y la ruta
+ * 1. Metodo → GET, POST, PUT, PATCH, DELETE 
+   2. url: [localhost](http://localhost):8080
+    *ES LA COMBINACIÓN DEL METODO Y LA URL*
  */
+// GET -> localhost:8080
+// POST -> localhost:8080
+// PATCH -> localhost:8080
+// PUT -> localhost:8080
+// DELETE -> localhost:8080
 
 //* Express
 
@@ -14,6 +22,11 @@ const server = express()
 
 //&GET
 server.get("/", (request, response)=>{
+    const {url, method} = request 
+
+    console.log("method", method)
+    console.log("url", url)
+
     response.write("Bienvenido al GET de Home con Express")
     response.end()
 })
@@ -21,6 +34,12 @@ server.get("/", (request, response)=>{
 //&POST
 server.post("/", (request, response)=>{
     response.write("Bienvenido al POST de Home con Express")
+    response.end()
+})
+
+//&POST - User 
+server.post("/users", (request, response)=>{
+    response.write("Bienvenido al POST de Users con Express")
     response.end()
 })
 

@@ -1,20 +1,30 @@
-//&CLASE 5 
+//&EndPoints 
+
 
 //? EndPoint 
+/**
+ *  Es el punto final a donde llega nuestro request , cambian por el metodo y la ruta
+ * 1. Metodo → GET, POST, PUT, PATCH, DELETE 
+   2. url: [localhost](http://localhost):8080
+    *ES LA COMBINACIÓN DEL METODO Y LA URL*
+ */
 // GET -> localhost:8080
 // POST -> localhost:8080
 // PATCH -> localhost:8080
 // PUT -> localhost:8080
 // DELETE -> localhost:8080
 
-//const http = require("http")
+
+//* Estructuración de datos 
 
 //? 1. Se crea un servidor http
-const express = require("express")
 
-const server = express()
- 
-const serverr = http.createServer((request, response)=>{
+const http = require("http")
+
+/**
+ * 
+ */
+const server = http.createServer((request, response)=>{
 
     //Leer el request 
     //console.log("request", request)
@@ -81,14 +91,19 @@ const serverr = http.createServer((request, response)=>{
     }
     */
     
-    response.end() //ya se finalizao 
+    response.end() 
+    //ya se finalizao 
 
 })
 
 //? 2. Poner al servidor a escuchar
 //Te pide 2 parametros 
-//1. Port 
+//1. Port - Puerto 8080 
 //2. Callback -> lo que va hacer cuando se empiece a escuchar 
 server.listen(8080, ()=>{
     console.log("Server listening....")
 })
+
+
+
+
